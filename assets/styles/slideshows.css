@@ -5,14 +5,86 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background-color: #f4f6f8;
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
     color: #1f2937;
     padding: 24px;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(244, 246, 248, 0.3), rgba(244, 246, 248, 0.3)), url("../images/Copilot_20260504_001827.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    transform: scale(1.03);
+    z-index: -1;
+}
+
 h1 {
     text-align: center;
-    margin-bottom: 28px;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.slideshow-card.intro-card {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+ ;
+}
+
+.slideshow-card.intro-card:hover {
+    border-color: #22c55e;
+}
+
+.intro-card h1 {
+    margin-top: 0;
+}
+
+.top-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 0 auto 4px;
+}
+
+.top-contact a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #374151;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.top-contact a:hover {
+    border-color: #22c55e;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(17, 24, 39, 0.15);
+}
+
+.top-contact a[aria-label="WhatsApp"] {
+    color: #22c55e;
+}
+
+.top-contact a[aria-label="Email"] {
+    color: #2563eb;
+}
+
+.top-contact a[aria-label="Mobile"] {
+    color: #a855f7;
 }
 
 .slideshow-grid {
@@ -24,10 +96,24 @@ h1 {
 }
 
 .slideshow-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid transparent;
     border-radius: 12px;
     padding: 16px;
     box-shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
+    transition: border-color 0.2s ease;
+}
+
+.slideshow-card:hover {
+    border-color: #dc2626;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(2):hover {
+    border-color: #facc15;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(3):hover {
+    border-color: #a855f7;
 }
 
 .slideshow-title {
@@ -42,6 +128,28 @@ h1 {
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
+}
+
+.coming-soon-note {
+    margin-top: 8px;
+    border: 1px dashed #a855f7;
+    border-radius: 10px;
+    background: #f5edff;
+    padding: 28px 16px;
+    text-align: center;
+}
+
+.coming-soon-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #7e22ce;
+}
+
+.coming-soon-text {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #5b21b6;
 }
 
 .mySlides {
@@ -122,6 +230,14 @@ h1 {
     border-color: #dc2626;
 }
 
+.slideshow-grid .slideshow-card:nth-of-type(2) .kayak-accordion:hover {
+    border-color: #facc15;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(3) .kayak-accordion:hover {
+    border-color: #a855f7;
+}
+
 .kayak-accordion-summary {
     cursor: pointer;
     list-style: none;
@@ -146,6 +262,11 @@ h1 {
 .kayak-accordion:hover .kayak-accordion-summary::after,
 .kayak-accordion[open] .kayak-accordion-summary::after {
     color: #dc2626;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(3) .kayak-accordion:hover .kayak-accordion-summary::after,
+.slideshow-grid .slideshow-card:nth-of-type(3) .kayak-accordion[open] .kayak-accordion-summary::after {
+    color: #a855f7;
 }
 
 .kayak-accordion[open] .kayak-accordion-summary::after {
@@ -193,6 +314,33 @@ h1 {
     background-color: #3b82f6;
 }
 
+.slideshow-grid .slideshow-card:nth-of-type(1) .dot {
+    background-color: #fca5a5;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(1) .dot.active,
+.slideshow-grid .slideshow-card:nth-of-type(1) .dot:hover {
+    background-color: #dc2626;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(2) .dot {
+    background-color: #fde68a;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(2) .dot.active,
+.slideshow-grid .slideshow-card:nth-of-type(2) .dot:hover {
+    background-color: #facc15;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(3) .dot {
+    background-color: #d8b4fe;
+}
+
+.slideshow-grid .slideshow-card:nth-of-type(3) .dot.active,
+.slideshow-grid .slideshow-card:nth-of-type(3) .dot:hover {
+    background-color: #a855f7;
+}
+
 .fade {
     animation-name: fade;
     animation-duration: 1s;
@@ -204,6 +352,22 @@ h1 {
 .kayak-accordion-summary:focus-visible {
     outline: 2px solid #3b82f6;
     outline-offset: 2px;
+}
+
+.site-footer {
+    max-width: 1200px;
+    margin: 28px auto 0;
+    padding: 14px 16px;
+    text-align: center;
+    color: #4b5563;
+    font-size: 13px;
+    border-top: 1px solid #d1d5db;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+}
+
+.site-footer p {
+    margin: 4px 0;
 }
 
 @keyframes fade {
