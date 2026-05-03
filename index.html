@@ -3,9 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document/title>
+    <title>Three Slideshows</title>
+    <link rel="stylesheet" href="assets/styles/slideshows.css">
 </head>
 <body>
-    
+    <h1>Kayaks</h1>
+
+    <div class="slideshow-grid">
+        <section class="slideshow-card" data-slideshow>
+            <h2 class="slideshow-title">Dagger (EGO)</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="assets/images/dp1.png" alt="Dagger image 1">
+                    <div class="text">380 GBP</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="assets/images/dp2.png" alt="Dagger image 2">
+                    <div class="text">380 GBP</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="assets/images/dp3.png" alt="Dagger image 3">
+                    <div class="text">380 GBP</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="assets/images/dp4.png" alt="Dagger image 4">
+                    <div class="text">380 GBP</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="assets/images/dp5.png" alt="Dagger image 5">
+                    <div class="text">380 GBP</div>
+                </div>
+
+                <button class="prev" type="button" data-action="prev" aria-label="Previous slide">&#10094;</button>
+                <button class="next" type="button" data-action="next" aria-label="Next slide">&#10095;</button>
+            </div>
+
+            <div class="dots">
+                <button class="dot" type="button" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="dot" type="button" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="dot" type="button" data-slide="3" aria-label="Go to slide 3"></button>
+                <button class="dot" type="button" data-slide="4" aria-label="Go to slide 4"></button>
+                <button class="dot" type="button" data-slide="5" aria-label="Go to slide 5"></button>
+            </div>
+
+            <details class="kayak-accordion">
+                <summary class="kayak-accordion-summary">Kayak Details</summary>
+                <div class="kayak-details">
+                    <p class="kayak-details-description">
+                        Dagger EGO is a compact whitewater kayak designed for playful river runs and fast maneuvering.
+                        Ideal for paddlers who want responsive edging and easy control in waves and eddies.
+                        The kayak also comes with a spraydeck, paddles, helmet, and a buoyancy vest.
+                    </p>
+                    <ul class="kayak-spec-list">
+                        <li><strong>Model:</strong> Dagger EGO</li>
+                        <li><strong>Category:</strong> Whitewater / Playboat</li>
+                        <li><strong>Condition:</strong> Good used condition</li>
+                        <li><strong>Price:</strong> 380 GBP</li>
+                        <li><strong>Included:</strong> Spraydeck, paddles, helmet, buoyancy vest</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <section class="slideshow-card" data-slideshow>
+            <h2 class="slideshow-title">Slideshow 2</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://picsum.photos/seed/city1/900/500" alt="City skyline">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://picsum.photos/seed/city2/900/500" alt="Night downtown">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://picsum.photos/seed/city3/900/500" alt="Bridge lights">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <button class="prev" type="button" data-action="prev" aria-label="Previous slide">&#10094;</button>
+                <button class="next" type="button" data-action="next" aria-label="Next slide">&#10095;</button>
+            </div>
+
+            <div class="dots">
+                <button class="dot" type="button" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="dot" type="button" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="dot" type="button" data-slide="3" aria-label="Go to slide 3"></button>
+            </div>
+        </section>
+
+        <section class="slideshow-card" data-slideshow>
+            <h2 class="slideshow-title">Slideshow 3</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://picsum.photos/seed/beach1/900/500" alt="Beach sunset">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://picsum.photos/seed/beach2/900/500" alt="Palm trees">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://picsum.photos/seed/beach3/900/500" alt="Coastal rocks">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <button class="prev" type="button" data-action="prev" aria-label="Previous slide">&#10094;</button>
+                <button class="next" type="button" data-action="next" aria-label="Next slide">&#10095;</button>
+            </div>
+
+            <div class="dots">
+                <button class="dot" type="button" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="dot" type="button" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="dot" type="button" data-slide="3" aria-label="Go to slide 3"></button>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/scripts/slideshows.js"></script>
 </body>
 </html>
