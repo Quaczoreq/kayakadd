@@ -264,6 +264,11 @@ h1 {
     color: #dc2626;
 }
 
+.slideshow-grid .slideshow-card:nth-of-type(2) .kayak-accordion:hover .kayak-accordion-summary::after,
+.slideshow-grid .slideshow-card:nth-of-type(2) .kayak-accordion[open] .kayak-accordion-summary::after {
+    color: #facc15;
+}
+
 .slideshow-grid .slideshow-card:nth-of-type(3) .kayak-accordion:hover .kayak-accordion-summary::after,
 .slideshow-grid .slideshow-card:nth-of-type(3) .kayak-accordion[open] .kayak-accordion-summary::after {
     color: #a855f7;
