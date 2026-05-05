@@ -42,6 +42,35 @@ h1 {
     border-color: #22c55e;
 }
 
+.slideshow-card.general-description-card {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    border-color: #9ca3af;
+    background: rgba(31, 41, 55, 0.9);
+    color: #ffffff;
+}
+
+.slideshow-card.general-description-card:hover {
+    border-color: #9ca3af;
+}
+
+.general-description-title {
+    margin: 0 0 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.general-description-text {
+    margin: 0 25% 8px;
+    line-height: 1.45;
+    color: #ffffff;
+}
+
+.general-description-text:last-child {
+    margin-bottom: 0;
+}
+
 .intro-card h1 {
     margin-top: 0;
 }
