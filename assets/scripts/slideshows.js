@@ -61,3 +61,31 @@ function showSlides(index, slideshow) {
 
     slideshowIndices.set(slideshow, nextIndex);
 }
+
+const legCalculatorForm = document.getElementById("legCalculatorForm");
+const heightInput = document.getElementById("heightInput");
+const heightUnit = document.getElementById("heightUnit");
+const legLengthResult = document.getElementById("legLengthResult");
+const inseamResult = document.getElementById("inseamResult");
+
+if (legCalculatorForm && heightInput && heightUnit && legLengthResult && inseamResult) {
+    legCalculatorForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const heightValue = Number(heightInput.value);
+        const unitValue = heightUnit.value;
+
+        if (!Number.isFinite(heightValue) || heightValue <= 0) {
+            legLengthResult.textContent = "Enter a valid height";
+            inseamResult.textContent = "Enter a valid height";
+            return;
+        }
+
+        const legLength = heightValue * 0.53;
+        const inseam = heightValue * 0.46;
+        const unitLabel = unitValue === "in" ? '"' : unitValue;
+
+        legLengthResult.textContent = `${legLength.toFixed(2)} ${unitLabel}`;
+        inseamResult.textContent = `${inseam.toFixed(2)} ${unitLabel}`;
+    });
+}

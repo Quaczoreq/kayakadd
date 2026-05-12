@@ -26,11 +26,43 @@
 
     <section class="slideshow-card general-description-card" aria-label="General sales information">
         <h2 class="general-description-title">General Description</h2>
-        <p class="general-description-text">Kayaks come in set.</p>
-        <p class="general-description-text">Colors of helmet and buoyancy vest can be chosen to individual liking.</p>
-        <p class="general-description-text">No single sales on helmets, paddles, or vests.</p>
-        <p class="general-description-text">Open to reasonable offers.</p>
-        <p class="general-description-text">I am open for wholesale special price also.</p>
+        <p class="general-description-text">
+            Quality Kayak Sets Available. They come as complete sets, with helmet and buoyancy vest colours customizable to your preference.
+            Individual helmets, paddles, and vests are not sold separately.<br>
+            All kayaks have been waxed for the winter and stored indoors. Open to reasonable offers.
+        </p>
+        <p class="general-description-text"><strong>Wholesale pricing for bulk purchases available</strong></p>
+    </section>
+
+    <section class="slideshow-card leg-calculator-card" aria-label="Leg length estimator">
+        <h2 class="leg-calculator-title">Estimate your LEG and INSEAM length</h2>
+
+        <form class="leg-calculator-form" id="legCalculatorForm">
+            <div class="leg-calc-input-row">
+                <label for="heightInput">Height</label>
+                <input id="heightInput" name="heightInput" type="number" min="1" step="0.01" placeholder="Enter your height" required>
+                <select id="heightUnit" name="heightUnit" required>
+                    <option value="cm">cm</option>
+                    <option value="in">inches (")</option>
+                    <option value="ft">feet</option>
+                </select>
+            </div>
+            <button type="submit" class="leg-calc-button">Calculate</button>
+        </form>
+
+        <div class="leg-calculator-results" id="legCalculatorResults" aria-live="polite">
+            <p><strong>Leg length:</strong> <span id="legLengthResult">—</span></p>
+            <p><strong>Inseam:</strong> <span id="inseamResult">—</span></p>
+        </div>
+
+        <p class="leg-calculator-description">
+            <span class="leg-calculator-help-text">This estimate can help you gauge how well a kayak might fit based on your height, but individual proportions can vary.</span>
+        </p>
+
+        <p class="leg-calculator-note">
+            Note: this is an average estimate only, and individual proportions can vary.<br>
+            This estimate uses <strong>anthropometric</strong> ratios — proportions of the human body tend to stay fairly consistent across adults.
+        </p>
     </section>
 
     <div class="slideshow-grid">
@@ -80,7 +112,7 @@
             </div>
 
             <details class="kayak-accordion">
-                <summary class="kayak-accordion-summary">Kayak Details</summary>
+                <summary class="kayak-accordion-summary"><span class="summary-label">Kayak Details</span><strong class="summary-price">380 GBP</strong></summary>
                 <div class="kayak-details">
                     <p class="kayak-details-description">
                         Dagger EGO is a compact whitewater kayak designed for playful river runs and fast maneuvering.
@@ -89,10 +121,25 @@
                     </p>
                     <ul class="kayak-spec-list">
                         <li><strong>Model:</strong> Dagger Super EGO</li>
-                       <li><strong>Age:</strong>Adult</li> 
+                        <li><strong>Age:</strong> Adult</li>
                         <li><strong>Category:</strong> Whitewater / Playboat</li>
+                        <li><strong>Size and weight spec:</strong>
+                            <ul>
+                                <li>Length: 6'1" (185 cm)</li>
+                                <li>Width: 25.5" (65 cm)</li>
+                                <li>Weight: 32 lb (14.5 kg)</li>
+                                <li>Volume: 45 gal (170 L)</li>
+                                <li>Paddler Weight Range: 120–180 lb (54–82 kg)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Leg room:</strong>
+                            <ul>
+                                <li>Fits paddlers up to ~31–32" inseam.</li>
+                                <li>Taller paddlers (33"+) usually report knees hitting the deck or needing foam removal.</li>
+                            </ul>
+                        </li>
                         <li><strong>Condition:</strong> Good used condition</li>
-                        <li><strong>Price:</strong> 380 GBP or <strong>best offer</strong> </li>
+                        <li><strong>Price:</strong> 380 GBP or <strong>best offer</strong></li>
                         <li><strong>Included:</strong> Spraydeck, paddles, helmet, buoyancy vest</li>
                     </ul>
                 </div>
@@ -138,7 +185,7 @@
             </div>
 
             <details class="kayak-accordion">
-                <summary class="kayak-accordion-summary">Kayak Details</summary>
+                <summary class="kayak-accordion-summary"><span class="summary-label">Kayak Details</span><strong class="summary-price">300 GBP</strong></summary>
                 <div class="kayak-details">
                     <p class="kayak-details-description">
                         Dagger Kingpin is a compact whitewater kayak designed for playful river runs.
@@ -147,8 +194,23 @@
                     <ul class="kayak-spec-list">
                         <li><strong>Model:</strong> Dagger Kingpin 6.1</li>
                         <li><strong>Category:</strong> Whitewater / Playboat</li>
-                        <li><strong>Paddler Weight Range:</strong> 36–46 kg</li>
+                        <li><strong>Size and weight spec:</strong>
+                            <ul>
+                                <li>Length: 6'1" (185 cm)</li>
+                                <li>Width: 25.5" (65 cm)</li>
+                                <li>Weight: 33 lb (15 kg)</li>
+                                <li>Volume: 43 gal (163 L)</li>
+                                <li>Paddler Weight Range: 120–170 lb (54–77 kg)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Leg room:</strong>
+                            <ul> 
+                                <li>Fits paddlers up to ~32–33" inseam.</li>
+                            </ul>
+                        </li>
                         <li><strong>Condition:</strong> Good used condition</li>
+                        <li><strong>Price:</strong> 300 GBP or <strong>best offer</strong></li>
+                        <li><strong>Included:</strong> Paddles, helmet, buoyancy vest</li>
                     </ul>
                 </div>
             </details>
@@ -200,19 +262,33 @@
             </div>
 
             <details class="kayak-accordion">
-                <summary class="kayak-accordion-summary">Kayak Details</summary>
+                <summary class="kayak-accordion-summary"><span class="summary-label">Kayak Details</span><strong class="summary-price">380 GBP</strong></summary>
                 <div class="kayak-details">
                     <p class="kayak-details-description">
-                        Dagger is a compact whitewater kayak designed for playful river runs and fast maneuvering.
+                        Dagger is a compact whitewater kayak designed for playful river runs and fast maneuvering. Designed as a river‑runner/play hybrid.
                         Ideal for paddlers who want responsive edging and easy control in waves and eddies.
                         The kayak also comes with a spraydeck, paddles, helmet, and a buoyancy vest.
                     </p>
                     <ul class="kayak-spec-list">
                         <li><strong>Model:</strong> Dagger</li>
                         <li><strong>Age:</strong> Adult</li>
-                        <li><strong>Category:</strong> Whitewater / Playboat</li>
+                        <li><strong>Category:</strong> Whitewater</li>
+                        <li><strong>Size and weight spec:</strong>
+                            <ul>
+                                <li>Length: 7'4" (224 cm)</li>
+                                <li>Width: 25.5" (65 cm)</li>
+                                <li>Weight: 38 lb (17 kg)</li>
+                                <li>Volume: 55 gal (208 L)</li>
+                                <li>Paddler Weight Range: 140–220 lb (64–100 kg)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Leg room:</strong>
+                            <ul>
+                                <li>Fits paddlers up to ~34–35" inseam.</li>
+                            </ul>
+                        </li>
                         <li><strong>Condition:</strong> Good used condition</li>
-                        <li><strong>Price:</strong> 400 GBP or best offer</li>
+                        <li><strong>Price:</strong> 380 GBP or best offer</li>
                         <li><strong>Included:</strong> Spraydeck, paddles, helmet, buoyancy vest</li>
                     </ul>
                 </div>
@@ -222,7 +298,7 @@
 
     <footer class="site-footer">
         <p>© 2026 KO. All rights reserved.</p>
-        <p>Design by <a href="https://www.linkedin.com/in/katarzyna-opozda-511558150" target="_blank" rel="noopener noreferrer" class="footer-link"><strong>Katarzyna Opozda</a></p>
+        <p>Design by <a href="https://www.linkedin.com/in/katarzyna-opozda-511558150" target="_blank" rel="noopener noreferrer" class="footer-link"><strong>Katarzyna Opozda</strong></a></p>
     </footer>
 
     <script src="assets/scripts/slideshows.js"></script>
