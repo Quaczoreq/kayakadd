@@ -438,6 +438,10 @@ h1 {
     margin-bottom: 4px;
 }
 
+.kayak-spec-list > li + li {
+    margin-top: 12px;
+}
+
 .dot {
     cursor: pointer;
     height: 12px;
